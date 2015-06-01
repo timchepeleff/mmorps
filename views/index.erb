@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic HTML Page</title>
+    <link rel="stylesheet" href="/style.css"
+  </head>
+
+<body>
+
+<h1>MMORPS</h1>
+
+
+<p><% if session[:p_score] == 3 %>
+    <h1>Player wins</h1>
+
+    <% elsif session[:c_score] == 3 %>
+    <h1>Computer wins</h1>
+
+    <% else %>
+      <h1><%= session[:output] %></h1>
+   <% end %></p>
+<p>Player  Score</p>
+<p>Human: <%= session[:p_score] %> </p>
+<p>Computer Score: <%= session[:c_score] %></p>
+
+<p>Choose!</p>
+
+
+    <% if session[:p_score] == 3 || session[:c_score] == 3 %>
+      <form action='/reset' method='post'>
+      <input value="Play Again?" type="submit" id="play_again" name='play+again'>
+    <% else %>
+      <form action="/rps" method="post">
+      <input value="Rock" type="submit" id="Rock" name="choice">
+      <input value="Paper" type="submit" id="Paper" name="choice">
+      <input value="Scissors" type="submit" id="Scissors" name="choice">
+      </form>
+    <% end %>
+
+
+
+</body>
+</html>
+
+
+
