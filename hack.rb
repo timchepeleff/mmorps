@@ -1,9 +1,6 @@
 require 'uri'
 require 'openssl'
 
-
-
-
 str = "BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiRTMwZDUyNWYzZWRkMzY0ZWZkMmY0%0AODk1MzJkNzIyZmNiZDg2OGYzM2UwYzk3YTQyNWNhYWMzYjk2NDgxYzBjNDIG%0AOwBG%0A--abc1b5f04f16e41592c48d954ee7ff7f5bbe38de"
 
 def decode_session(str)
